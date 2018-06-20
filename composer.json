@@ -1,58 +1,62 @@
 {
-    "name": "oro/crm-application",
+    "name": "oro\/crm-application",
     "description": "The OroCRM distribution",
-    "homepage": "https://github.com/oroinc/crm-application.git",
+    "homepage": "https:\/\/github.com\/oroinc\/crm-application.git",
     "license": "OSL-3.0",
     "autoload": {
-        "psr-4": {"": "src/"},
-        "exclude-from-classmap": ["**/Tests/"]
+        "psr-4": {
+            "": "src\/"
+        },
+        "exclude-from-classmap": [
+            "**\/Tests\/"
+        ]
     },
     "repositories": {
         "composer": {
             "type": "composer",
-            "url": "https://packagist.orocrm.com"
+            "url": "https:\/\/packagist.orocrm.com"
         },
         "asset-packagist": {
-          "type": "composer",
-          "url": "https://asset-packagist.orocrm.com"
+            "type": "composer",
+            "url": "https:\/\/asset-packagist.orocrm.com"
         }
     },
     "require": {
-        "oro/crm": "2.6.*",
-        "oro/platform-serialised-fields": "2.6.*",
-        "oro/crm-hangouts-call-bundle": "2.6.*",
-        "oro/crm-abandoned-cart": "2.6.*",
-        "oro/crm-magento-embedded-contact-us": "2.6.*",
-        "oro/crm-mail-chimp": "2.6.*",
-        "oro/crm-dotmailer": "2.6.*",
-        "oro/crm-zendesk": "2.6.*"
+        "oro\/crm": "2.6.*",
+        "oro\/platform-serialised-fields": "2.6.*",
+        "oro\/crm-hangouts-call-bundle": "2.6.*",
+        "oro\/crm-abandoned-cart": "2.6.*",
+        "oro\/crm-magento-embedded-contact-us": "2.6.*",
+        "oro\/crm-mail-chimp": "2.6.*",
+        "oro\/crm-dotmailer": "2.6.*",
+        "oro\/crm-zendesk": "2.6.*"
     },
     "require-dev": {
-        "sensio/generator-bundle": "3.1.2",
-        "behat/behat": "3.2.2",
-        "behat/mink-extension": "2.2.*",
-        "behat/mink-selenium2-driver": "1.*",
-        "behat/symfony2-extension": "2.1.1",
-        "nelmio/alice": "2.2.*",
-        "phpunit/phpunit": "5.7.*",
-        "phpunit/phpunit-selenium": "3.0.*",
-        "johnkary/phpunit-speedtrap": "1.0.*",
-        "mybuilder/phpunit-accelerator": "1.2.*",
-        "squizlabs/php_codesniffer": "2.8.*",
-        "phpmd/phpmd": "2.6.*",
-        "sebastian/phpcpd": "dev-master#cff7f36c2ae89d59987de25d14fd41a72dd4a703 as 3.1.0",
-        "phpunit/phpcov": "3.1.*",
-        "symfony/phpunit-bridge": "3.2.*",
-        "friendsofphp/php-cs-fixer": "2.1.*"
+        "sensio\/generator-bundle": "3.1.2",
+        "behat\/behat": "3.2.2",
+        "behat\/mink-extension": "2.2.*",
+        "behat\/mink-selenium2-driver": "1.*",
+        "behat\/symfony2-extension": "2.1.1",
+        "nelmio\/alice": "2.2.*",
+        "phpunit\/phpunit": "5.7.*",
+        "phpunit\/phpunit-selenium": "3.0.*",
+        "johnkary\/phpunit-speedtrap": "1.0.*",
+        "mybuilder\/phpunit-accelerator": "1.2.*",
+        "squizlabs\/php_codesniffer": "2.8.*",
+        "phpmd\/phpmd": "2.6.*",
+        "sebastian\/phpcpd": "3.0.1",
+        "phpunit\/phpcov": "3.1.*",
+        "symfony\/phpunit-bridge": "3.2.*",
+        "friendsofphp\/php-cs-fixer": "2.1.*"
     },
     "config": {
         "platform": {
             "php": "7.1"
         },
-        "component-dir": "web/bundles/components",
+        "component-dir": "web\/bundles\/components",
         "bin-dir": "bin",
         "fxp-asset": {
-          "enabled": false
+            "enabled": false
         }
     },
     "scripts": {
@@ -79,7 +83,26 @@
         "symfony-app-dir": "app",
         "symfony-web-dir": "web",
         "incenteev-parameters": {
-            "file": "app/config/parameters.yml"
+            "file": "app\/config\/parameters.yml",
+            "env-map": {
+                "database_driver": "APP_DB_DRIVER",
+                "database_host": "APP_DB_HOST",
+                "database_port": "APP_DB_PORT",
+                "database_name": "APP_DB_NAME",
+                "database_user": "APP_DB_USER",
+                "database_password": "APP_DB_PASSWORD",
+                "mailer_transport": "APP_MAILER_TRANSPORT",
+                "mailer_host": "APP_MAILER_HOST",
+                "mailer_port": "APP_MAILER_PORT",
+                "mailer_encryption": "APP_MAILER_ENCRYPTION",
+                "mailer_user": "APP_MAILER_USER",
+                "mailer_password": "APP_MAILER_PASSWORD",
+                "websocket_bind_port": "APP_WEBSOCKET_BACKEND_PORT",
+                "websocket_backend_port": "APP_WEBSOCKET_BACKEND_PORT",
+                "websocket_frontend_port": "APP_WEBSOCKET_FRONTEND_PORT",
+                "installed": "APP_IS_INSTALLED",
+                "secret": "APP_SECRET"
+            }
         }
     }
 }
