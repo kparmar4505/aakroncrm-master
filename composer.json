@@ -29,7 +29,8 @@
         "oro\/crm-magento-embedded-contact-us": "2.6.*",
         "oro\/crm-mail-chimp": "2.6.*",
         "oro\/crm-dotmailer": "2.6.*",
-        "oro\/crm-zendesk": "2.6.*"
+        "oro\/crm-zendesk": "2.6.*",
+        "ci\/restclientbundle": "^2.0"
     },
     "require-dev": {
         "sensio\/generator-bundle": "3.1.2",
